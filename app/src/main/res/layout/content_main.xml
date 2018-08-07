@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    android:background="#000"
+    android:id="@+id/mainL"
+    tools:showIn="@layout/activity_main">
+
+
+
+    <RelativeLayout
+        android:id="@+id/mainPIC"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/mainPIC2"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/ankpa_kanival_bg"
+        android:layout_centerInParent="true"
+        android:id="@+id/picture_layout"
+        android:layout_width="1024px"
+        android:layout_height="1024px">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            app:civ_border_color="#fff"
+            app:civ_border_width="1dp"
+            android:onClick="addImage"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/setImg"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="0dp"
+            android:layout_width="450px"
+            android:layout_height="500px" />
+
+        <TextView
+            android:id="@+id/txtNameDisp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_below="@id/setImg"
+            android:textColor="#fff"
+            android:text="#Your Name"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:textColor="#fff"
+        android:text="  Add Image"
+        android:onClick="addImage"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:drawableLeft="@drawable/ic_add_a_photo"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/mainPIC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="#ffcc00"
+        android:layout_alignParentBottom="true"
+        android:text="Click on the add image button above to select image, then press and hold the entire banner to share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
